@@ -1,0 +1,1 @@
+https://www.sitepoint.com/a-basic-html5-template/ helped with a boiler plate to save time, and allow me to have a solid foundation for views with out wasting valuable time
