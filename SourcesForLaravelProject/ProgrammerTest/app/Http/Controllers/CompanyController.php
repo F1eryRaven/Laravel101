@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Company;
 use Illuminate\Http\Request;
 use Exception;
-use Faker\Provider\Company as ProviderCompany;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 
 
@@ -18,7 +16,7 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
         $companies = DB::table('companies')->select('companies.Name', 'companies.Email','companies.Website','companies.LogoLocation', 'companies.id')->simplepaginate(10);
         return view('CP-index', compact("companies"));
     }
