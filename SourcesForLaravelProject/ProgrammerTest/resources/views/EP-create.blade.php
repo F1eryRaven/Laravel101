@@ -43,7 +43,7 @@
               <input type="tel" class="form-control" name="PhoneNumber"/>
           </div>
           <div class="form-group">
-            <label for="CompanyID">Company</label>
+            <label for="CompanyID"></label>
             <input type="text" class="form-control" name="CompanyID"/>
         </div>
           
