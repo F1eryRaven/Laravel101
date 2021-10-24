@@ -1,8 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Faker\Factory as Faker;
 
 class UserSeeder extends Seeder
 {
@@ -13,11 +14,14 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        
-        DB::table('users')->insert([
-            
-            'email' => 'admin@admin.com ',
-            'password' => 'password',
+        $faker = faker::create();
+        foreach (range(1, 100) as $index) {
+            DB::table('user')->insert([
+                'Name' =>$faker -> name,
+                'Email'=> $faker ->email,
+                'Password'=> $faker -> password(8.12)
+                
         ]);
+        }
     }
 }
